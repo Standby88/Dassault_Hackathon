@@ -5,6 +5,9 @@
 #include <fstream>
 #include "Date.h"
 #include "Time.h"
+#include "Transaction.h"
+#include <vector>
+
 
 using namespace std;
 
@@ -16,8 +19,11 @@ public:
 
 	bool Test_TimePosCountry();
 
+	void InsertTransaction(Transaction T);
+
+	vector<Transaction> a_records;
 };
 
-istream & operator >> (istream & input, Readings R);
+istream & operator >> (istream & input, Readings & R);
 
 #endif

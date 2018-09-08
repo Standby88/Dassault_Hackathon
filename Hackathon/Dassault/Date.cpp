@@ -116,7 +116,7 @@ bool Date:: operator ==(const Date & oDate) const
 	return(year == oDate.Getyear() && month == oDate.Getmonth() && day == oDate.Getday());
 }
 
-bool Date:: operator <<(const Date & oDate) const
+bool Date:: operator <(const Date & oDate) const
 {
 	//if the year is less than the other date's this must be less than
 	if (year <= oDate.Getyear())
