@@ -28,15 +28,13 @@ istream & operator >> (istream & input, Readings & R)
 	getline(input, tempStr);
 
 	Transaction temp;
-	int x = 0;
 	while (!input.eof())
 	{
-		x++;
+
 		input >> temp;
 		
 		R.InsertTransaction(temp);
 	}
 
-	cout << "number of entries = " + x << endl;
 	return input;
 }

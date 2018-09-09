@@ -13,6 +13,8 @@ public:
 
 	long cID;	//customer ID number
 
+	long cLimit;
+
 	int numbAttempts;
 
 	Date date;
@@ -27,8 +29,10 @@ public:
 	int CountryofIssue;
 
 	bool international;
+	bool pin;
 
+	int failPrevMonth;
 
 };
 
-istream & operator >> (istream & input, Transaction T);
+istream & operator >> (istream & input, Transaction & t);

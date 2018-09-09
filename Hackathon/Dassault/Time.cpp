@@ -48,7 +48,16 @@ istream & operator >> (istream & input, Time & T)
 	x = atoi(s1.c_str());
 	T.Sethours(x);
 	getline(input, s1, ',');
-	x = atoi(s1.c_str());
+	if (s1.length() == 2)
+	{
+		x = atoi(s1.c_str());
+	}
+	else
+	{
+		s1 = s1.substr(0, 2);
+		x = atoi(s1.c_str());
+	}
+
 	T.Setminutes(x);
 	return input;
 }
