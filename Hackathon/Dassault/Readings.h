@@ -18,10 +18,12 @@ public:
 	~Readings();
 
 	bool Test_TimePosCountry();
+	bool Test_OutOfCountry();
 
 	void InsertTransaction(Transaction T);
 
 	vector<Transaction> a_records;
+	vector<Transaction> ofcResults;
 };
 
 istream & operator >> (istream & input, Readings & R);
